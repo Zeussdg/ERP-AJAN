@@ -1,0 +1,138 @@
+PROJE GUNLUGU - turkish-llm
+============================
+Asagida projenin basindan bugune kadar, adim adim ne yapildigi anlatiliyor.
+Her madde ayri bir asama/olay; sirayla okunabilir.
+
+
+1) FIKIR VE KAPSAM BELIRLEME
+-----------------------------
+Proje, "klovo-ai" adli mevcut bir ERP asistani projesinden bagimsiz olarak,
+"kendi yapay zekamı sifirdan yapabilir miyim" sorusuyla basladi. Once genel
+bir "buyuk dil modeli" fikri konusuldu, sonra kapsam netlestirildi: hedef
+ChatGPT tarzi genel amacli bir sohbet modeli degil, Turkce konusan ve ERP
+gorevlerini (cari hesap, stok, fatura) dogru islemlere yonlendirebilen,
+hicbir dis AI API'sine (OpenAI/Gemini vb.) bagli olmayan, kucuk-orta
+olcekli bir dil modeli. Donanim: yerel bir NVIDIA GTX 1650 (4GB VRAM),
+gerekirse bulut destegi.
+
+
+2) FAZ 0 - YEREL PROTOTIP KURULUMU
+-----------------------------------
+GTX 1650 uzerinde, tamamen ucretsiz ve hizli sekilde bir "uctan uca calisan
+mekanizma" kuruldu:
+  - Python ortami (venv) ve PyTorch (CUDA destekli) kuruldu.
+  - Kucuk bir GPT mimarisi yazildi (PyTorch, ~4.2M parametre).
+  - Turkce Wikipedia'dan kucuk bir ornek metin cekildi (~250KB).
+  - Bu metinle kendi BPE tokenizer'imiz egitildi (vocab=4000).
+  - Model bu kucuk veriyle egitildi, ardindan metin uretimi denendi.
+Amac bilgi/kalite degil, "tokenizer -> model -> egitim -> uretim" zincirinin
+gercekten calistigini gormekti. Calisti.
+
+
+3) FAZ 1-2 - GERCEK VERI VE TOKENIZER
+---------------------------------------
+Turkce Wikipedia'nin TAM dump'i indirildi (~1GB sikistirilmis). Metni
+temizlemek icin "wikiextractor" kullanildi; extraction islemi bir noktada
+(muhtemelen devasa bir sablon yuzunden) tikanip durdu, o ana kadar
+tamamlanan ~520MB / 260.000 makale ile devam edildi (yeterliydi).
+
+Bu buyuk Turkce korpusla, AYRICA elle yazilan bir "ERP-Turkce terminolojisi"
+metniyle (fatura, stok, cari hesap, siparis gibi terimler) birlikte, 8000
+kelimelik yeni bir BPE tokenizer egitildi. ERP terimleri (orn. "fatura",
+"stok") tokenizer icinde az sayida parcaya bolunecek sekilde agirliklandi -
+amac modelin ERP kelime dagarcigina biraz daha "asina" olmasi, ama genel
+Turkce dilbilgisi ogrenimini feda etmeden.
+
+
+4) BULUT GPU ARAYISI VE COLAB'A GECIS
+----------------------------------------
+Yerel GTX 1650, gercek olcekli bir egitim icin yetersiz kaldigindan ucretsiz
+bir bulut GPU cozumu arandi (kiralik GPU/RunPod gibi secenekler de
+konusuldu ama once ucretsiz yol denendi). Google Colab'in VS Code eklentisi
+kuruldu ve baglanti denendi. Bu asamada bir dizi pratik sorun cikti ve
+tek tek cozuldu:
+  - Google Drive'daki proje klasorunun adi "turkish-llm" yerine yanlislikla
+    "turkısh-llm" (noktasiz i) olarak olusmustu - "Turkce I sorunu" -
+    klasor yeniden adlandirilarak duzeltildi.
+  - VS Code'un "Upload to Colab" ozelligi defalarca guvenilmez cikti:
+    bazen dosyayi yanlis klasore atti, bazen ayni isimli dosyayi
+    sessizce guncellemedi (eski surumu koruyup basarili gibi gosterdi).
+  - Colab'in ucretsiz GPU kotasi bir noktada tamamen doldu, birkac saat
+    beklemek gerekti.
+  - Colab runtime'i birkac kez beklenmedik sekilde sifirlandi/koptu.
+Cozum olarak, dosya yukleme ozelligine guvenmek yerine kod ve veri Colab
+hucrelerine DOGRUDAN Python ile yazdirildi (dosya sistemine elle yazma) -
+bu yontem guvenilir calisti ve tekrar tekrar kullanildi.
+
+
+5) FAZ 3 - TEMEL DIL MODELI EGITIMI (BASE PRETRAINING)
+---------------------------------------------------------
+Colab'in ucretsiz T4 GPU'sunda (15GB VRAM, yerel GTX 1650'nin ~4 kati):
+  - ~29.4 milyon parametreli bir model tasarlandi (context uzunlugu 256).
+  - Karisik hassasiyet (fp16) egitimi, warmup+cosine learning rate
+    cizelgesi ve "kesintiden sonra kaldigi yerden devam etme" (resume)
+    ozelligi eklendi - Colab baglantisi birkac kez koptugunda bu ozellik
+    sayesinde bastan baslamak gerekmedi.
+  - 520MB'lik Wikipedia+ERP korpusu uzerinde 20.000 adim egitim yapildi.
+Sonuc: val loss 8.99'dan (rastgele baslangic) 2.9573'e dustu (yaklasik
+"perplexity" 19 - kucuk bir model icin makul). Gercek metin uretimi test
+edildiginde: gramer ve ek kullanimi saglam cikti, ama (beklendigi gibi)
+konu tutarliligi zayifti - kucuk bir modelin bilinen siniri.
+
+
+6) FAZ 4 - GOREV/DIYALOG FINE-TUNING (ILK DENEME)
+----------------------------------------------------
+Amac: modelin serbest sohbet degil, "soru -> dogru islem (tool) + dogru
+parametreler" seklinde yapisal cevap uretmesini ogretmek (klovo-ai'nin
+mevcut ERP tool listesinden esinlenerek, artı 4 yeni fatura islemi
+eklenerek). Bunun icin sablon + ornek veri kombinasyonuyla sentetik bir
+"soru -> cevap" veri seti uretildi (~1750 ornek).
+
+Ilk fine-tuning denemesinde egitim kaybi (loss) suphe uyandiracak kadar
+hizli sifira yakin dustu. Sadece bu sayiya guvenmek yerine modelden
+GERCEKTEN metin uretmesi istendi ve buyuk bir sorun ortaya cikti: model
+her soruya SADECE bos/anlamsiz karakterler uretiyordu.
+
+
+7) FAZ 4 - KRITIK HATANIN BULUNMASI VE DUZELTILMESI
+--------------------------------------------------------
+Arastirma sonucu kodda ciddi bir hata bulundu: egitim sirasinda modele
+"su an gordugun token neyse, BIR SONRAKI token da odur" diye (yanlislikla)
+ogretiliyordu - oysa dogrusu "bir sonraki token'i tahmin et" olmaliydi
+(standart dil modeli kurali). Model bu yuzden anlamli bir sey ogrenmek
+yerine "az once gordugun seyi tekrarla" gibi kolay ama ise yaramaz bir
+yontem bulmustu.
+
+Hata duzeltildi ve bu sefer SADECE loss'a degil, modelin gercekten dogru
+cikti uretip uretmedigine bakan bir test yontemiyle dogrulandi. Duzeltme
+sonrasi model gercekten dogru JSON cikisi uretmeye basladi.
+
+
+8) FAZ 4 - GENELLEME TESTI VE VERI ZENGINLESTIRME
+------------------------------------------------------
+Hata duzeltildikten sonra, egitim setinde HIC GECMEYEN musteri isimleri ve
+ifadelerle bir "gercekten ogrendi mi yoksa ezberledi mi" testi yapildi.
+Sonuc: cogunlukla dogru calisiyordu (dogru islemi seciyor, dogru ismi
+kopyaliyordu), ama iki zayif nokta bulundu:
+  - Uzun/cok heceli ozel isimleri kopyalarken bazen bir hece dusuruyordu.
+  - Bir musteriyle "gecmiste ne is yapmisiz" tarzinda sorulan bazi sorularda
+    yanlis islemi seciyordu (bu tarz ifadeler egitim verisinde yeterince
+    temsil edilmiyordu).
+Veri setine uzun isimler, tekrarli rakamli fatura numaralari ve eksik
+ifade kaliplari eklenerek zenginlestirildi, model yeniden egitildi. Ayni
+zorlu testler tekrarlandiginda IKI SORUN DA DUZELMISTI. Kalan tek kusur
+kucuk ve onemsiz: bazi isimlerin basinda gereksiz bir bosluk karakteri.
+
+
+9) SU AN NEREDEYIZ
+---------------------
+Faz 0'dan Faz 4'e kadar her asama tamamlandi ve GERCEK CIKTILARLA
+dogrulandi (sadece sayilara/loss'a guvenilmedi, hep gercek uretim test
+edildi). Su an Colab'daki calisilan model ve veriler Google Drive'da
+guvenli sekilde duruyor.
+
+SIRADAKI ADIM - FAZ 5 (Sisteme Entegrasyon):
+Egitilmis modelin, klovo-ai projesindeki mevcut yapiya (AIService) uyacak
+sekilde sarmalanip, su an kullanilan Gemini/Mock yapay zeka
+saglayicilarinin YERINE gecmesi. Bu asama GPU gerektirmiyor, yerel bir
+bilgisayarda yapilabilecek Python kod isi.

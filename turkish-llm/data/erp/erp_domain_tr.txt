@@ -1,0 +1,73 @@
+# Cari Hesap
+
+ABC Elektronik Ltd. firmasının cari bakiyesi 325.000 TL, kredi limiti 400.000 TL'dir.
+XYZ Teknoloji A.Ş. için cari hesap hareketlerini listeler misin?
+Duran Bilişim'in vadesi geçmiş borcu var mı, kontrol eder misin?
+Mega Sistemler firmasının güncel bakiyesini görmek istiyorum.
+Net Bilgisayar'ın son ödemesi ne zaman yapılmış?
+Müşteri cari ekstresinde borç ve alacak hareketleri ayrı ayrı gösterilir.
+Bir müşterinin kredi limiti aşıldığında yeni satışa izin verilmemelidir.
+Cari hesap hareketi eklerken tarih, tutar ve işlem türü (borç/alacak) zorunludur.
+Vadesi geçmiş ödemesi olan müşterileri raporla.
+Bu ay tahsil edilmesi gereken toplam alacak tutarı nedir?
+Müşterinin bakiyesi negatifse, bu bizim ona borçlu olduğumuz anlamına gelir.
+Cari hesap mutabakatı için müşteriye ekstre gönderilmesi gerekiyor.
+
+# Stok ve Envanter
+
+Laptop Pro 15 modelinin güncel stok adedi kaç?
+Mekanik Klavye ürünü kritik stok seviyesinin altına düştü, yeniden sipariş verilmeli.
+Wireless Mouse için stok durumunu özetler misin?
+Hangi ürünler kritik stok seviyesinde, bir liste çıkar.
+Business Laptop 14 modelinin deposundaki mevcut miktarı sorgula.
+Stok girişi yapılırken ürün kodu, miktar ve depo bilgisi girilmelidir.
+Stok çıkışı satış, iade veya fire nedeniyle gerçekleşebilir.
+Minimum stok seviyesinin altına düşen ürünler otomatik olarak uyarı oluşturur.
+Depo sayımı sonucunda sistemdeki stok miktarı ile fiili miktar karşılaştırılır.
+Ürün kategorisine göre stok raporu almak istiyorum, örneğin Aksesuar kategorisi.
+Bir ürünün birden fazla depoda stok bilgisi olabilir.
+Kritik stoktaki ürünler için tedarikçiye otomatik sipariş oluşturulabilir.
+
+# Satış ve Sipariş
+
+Bu ay en çok satan ürün hangisi?
+Geçen aya göre satışlarımız yüzde kaç arttı?
+En çok satış yapan müşterimiz kim?
+Toplam satış tutarını ve satış adedini özetle.
+Sipariş oluşturulurken müşteri, ürün, miktar ve birim fiyat bilgisi girilir.
+Sipariş onaylandıktan sonra stoktan otomatik düşüm yapılmalıdır.
+Bu siparişin teslim tarihi ne zaman?
+Aylık satış performansını grafikle göster.
+İstanbul'daki müşterilerin toplam satış tutarı ne kadar?
+Sipariş durumu beklemede, onaylandı, kargoya verildi veya teslim edildi olabilir.
+Bir siparişte birden fazla ürün kalemi bulunabilir.
+
+# Fatura
+
+Bu sipariş için fatura oluşturmak istiyorum.
+Fatura numarası, fatura tarihi ve vade tarihi zorunlu alanlardır.
+Fatura satırında ürün adı, miktar, birim fiyat, KDV oranı ve tutar yer alır.
+Faturanın ara toplamı, KDV tutarı ve genel toplamı ayrı ayrı hesaplanır.
+Bu faturayı düzenlemek istiyorum, birim fiyatı güncelle.
+Kesilen bir faturayı iptal etmek için iptal faturası kesilmesi gerekir.
+E-fatura mükellefi olan müşterilere e-fatura, olmayanlara e-arşiv fatura kesilir.
+Fatura üzerinde alıcı unvanı, vergi dairesi ve vergi numarası bulunmalıdır.
+KDV oranı ürüne göre yüzde bir, sekiz veya yirmi olabilir.
+İskonto uygulanan faturalarda iskonto tutarı ayrı bir satırda gösterilir.
+Bu ayki kesilen tüm faturaların toplam tutarını listele.
+Fatura ödemesi vadesinde yapılmazsa gecikme faizi uygulanabilir.
+Toplu fatura kesimi için birden fazla siparişi tek seferde faturalandırabilirsin.
+Fatura iade edilirse, iade faturası düzenlenerek stok tekrar sisteme girer.
+
+# Genel ERP Terminolojisi
+
+Tedarikçi, ürünleri işletmeye satan dış firmadır.
+Satın alma siparişi, tedarikçiden ürün veya hizmet talep etmek için oluşturulur.
+Cari hesap, bir müşteri veya tedarikçiyle olan borç-alacak ilişkisini gösterir.
+Depo, ürünlerin fiziksel olarak saklandığı yerdir.
+Birim fiyat, bir ürünün tek adedinin satış veya alış fiyatıdır.
+Vade tarihi, bir ödemenin yapılması gereken son tarihtir.
+Taksitli ödemelerde her taksitin ayrı bir vade tarihi olur.
+Vergi numarası ve vergi dairesi, fatura kesiminde zorunlu bilgilerdir.
+Muhasebe entegrasyonu, ERP sistemindeki finansal verilerin muhasebe yazılımına aktarılmasıdır.
+Raporlama modülü, satış, stok ve cari verilerini özetleyen grafik ve tablolar sunar.

@@ -1,0 +1,188 @@
+{"text": "Lütfen Deniz Yazılım ile şimdiye kadar ne kadar alışveriş yapmışız?", "tool": "get_customer_sales", "arguments": {"customer_name": "Deniz Yazılım"}}
+{"text": "Lütfen FTR-2026-7777 numaralı faturanın KDV oranını yüzde 8 yap?", "tool": "update_invoice", "arguments": {"invoice_no": "FTR-2026-7777", "kdv_orani": 8}}
+{"text": "Yıldız Ticaret firmasına 3 adet Harici Disk 1TB için fatura düzenle bakar mısın?", "tool": "create_invoice", "arguments": {"customer_name": "Yıldız Ticaret", "product_name": "Harici Disk 1TB", "quantity": 3}}
+{"text": "Duran Bilişim'ın cari hareketlerini listele bakar mısın?", "tool": "get_customer_transactions", "arguments": {"customer_name": "Duran Bilişim"}}
+{"text": "Lütfen Akdeniz Gıda Sanayi'ın güncel bakiyesini göster?", "tool": "get_customer_balance", "arguments": {"customer_name": "Akdeniz Gıda Sanayi"}}
+{"text": "Vega Bilişim'ın cari hareketlerini listele?", "tool": "get_customer_transactions", "arguments": {"customer_name": "Vega Bilişim"}}
+{"text": "en az satan ürün hangisi", "tool": "get_top_products", "arguments": {"order": "asc"}}
+{"text": "Bursa'daki en düşük satış yapan müşteri kim?", "tool": "get_top_customers", "arguments": {"order": "asc", "city": "Bursa"}}
+{"text": "Tüm ürünlerin stok raporu?", "tool": "get_stock_status", "arguments": {}}
+{"text": "Geçmişte Net Bilgisayar'a ne kadar satış yapmışız bakar mısın?", "tool": "get_customer_sales", "arguments": {"customer_name": "Net Bilgisayar"}}
+{"text": "Kayseri'daki en fazla satış yapan müşteri kim bakar mısın?", "tool": "get_top_customers", "arguments": {"order": "desc", "city": "Kayseri"}}
+{"text": "Marmara Lojistik Hizmetleri bize borçlu mu", "tool": "get_customer_balance", "arguments": {"customer_name": "Marmara Lojistik Hizmetleri"}}
+{"text": "FTR-2026-0231 numaralı faturanın KDV oranını yüzde 1 yap", "tool": "update_invoice", "arguments": {"invoice_no": "FTR-2026-0231", "kdv_orani": 1}}
+{"text": "FTR-2026-1122 faturasını güncelle, KDV yüzde 8 olsun", "tool": "update_invoice", "arguments": {"invoice_no": "FTR-2026-1122", "kdv_orani": 8}}
+{"text": "Lütfen Trakya Tarım Ürünleri adına 3 adet Mekanik Klavye faturası oluştur?", "tool": "create_invoice", "arguments": {"customer_name": "Trakya Tarım Ürünleri", "product_name": "Mekanik Klavye", "quantity": 3}}
+{"text": "Lütfen Kartal Otomasyon'ın hesap ekstresini getir?", "tool": "get_customer_transactions", "arguments": {"customer_name": "Kartal Otomasyon"}}
+{"text": "Hangi ürünlerden acil sipariş vermeliyim bakar mısın?", "tool": "get_low_stock", "arguments": {}}
+{"text": "2026-08-01 - 2026-08-31 döneminde ne kadar satış yaptık bakar mısın?", "tool": "get_sales_summary", "arguments": {"start_date": "2026-08-01", "end_date": "2026-08-31"}}
+{"text": "Satış trendimiz yükseliyor mu düşüyor mu bakar mısın?", "tool": "get_sales_growth", "arguments": {}}
+{"text": "Lütfen Hangi ay en çok satış yapmışız?", "tool": "get_monthly_sales", "arguments": {}}
+{"text": "Lütfen Net Bilgisayar kaç kere sipariş vermiş?", "tool": "get_customer_sales", "arguments": {"customer_name": "Net Bilgisayar"}}
+{"text": "Güven Ofis Malzemeleri firmasının kredi limiti ne kadar", "tool": "get_customer_balance", "arguments": {"customer_name": "Güven Ofis Malzemeleri"}}
+{"text": "Yıldız Ticaret müşterisini bul?", "tool": "find_customer", "arguments": {"name": "Yıldız Ticaret"}}
+{"text": "Mega Sistemler ile geçmişte ne kadar iş yapmışız", "tool": "get_customer_sales", "arguments": {"customer_name": "Mega Sistemler"}}
+{"text": "Mega Sistemler ile ticaret geçmişimiz nasıl", "tool": "get_customer_sales", "arguments": {"customer_name": "Mega Sistemler"}}
+{"text": "Ankara bölgesinde en iyi kazandıran müşteri hangisi", "tool": "get_top_customers", "arguments": {"order": "desc", "city": "Ankara"}}
+{"text": "Toplam kaç satış işlemi yaptık bakar mısın?", "tool": "get_sales_summary", "arguments": {}}
+{"text": "Marmara Lojistik Hizmetleri hakkında bilgi ver", "tool": "find_customer", "arguments": {"name": "Marmara Lojistik Hizmetleri"}}
+{"text": "Pusula Teknoloji ne kadar borçlu", "tool": "get_customer_balance", "arguments": {"customer_name": "Pusula Teknoloji"}}
+{"text": "Karadeniz Maden İşletmeleri adına 3 adet USB Bellek 64GB faturası oluştur?", "tool": "create_invoice", "arguments": {"customer_name": "Karadeniz Maden İşletmeleri", "product_name": "USB Bellek 64GB", "quantity": 3}}
+{"text": "Yıldız Ticaret'ın cari hareketlerini listele?", "tool": "get_customer_transactions", "arguments": {"customer_name": "Yıldız Ticaret"}}
+{"text": "Kayseri bölgesinde en iyi kazandıran müşteri hangisi?", "tool": "get_top_customers", "arguments": {"order": "desc", "city": "Kayseri"}}
+{"text": "Lütfen Akdeniz Gıda Sanayi diye bir müşterimiz var mı?", "tool": "find_customer", "arguments": {"name": "Akdeniz Gıda Sanayi"}}
+{"text": "Akın Elektronik firmasına 5 adet Yazıcı Kartuşu için fatura düzenle", "tool": "create_invoice", "arguments": {"customer_name": "Akın Elektronik", "product_name": "Yazıcı Kartuşu", "quantity": 5}}
+{"text": "Lütfen Depoda azalan ürünleri göster?", "tool": "get_low_stock", "arguments": {}}
+{"text": "Kartal Otomasyon ile ticaret geçmişimiz nasıl?", "tool": "get_customer_sales", "arguments": {"customer_name": "Kartal Otomasyon"}}
+{"text": "Lütfen Ankara'daki en fazla satış yapan müşteri kim?", "tool": "get_top_customers", "arguments": {"order": "desc", "city": "Ankara"}}
+{"text": "Mega Sistemler'ın cari hesabı nasıl", "tool": "get_customer_balance", "arguments": {"customer_name": "Mega Sistemler"}}
+{"text": "en az satan ürün hangisi?", "tool": "get_top_products", "arguments": {"order": "asc"}}
+{"text": "Marmara Lojistik Hizmetleri kimdir?", "tool": "find_customer", "arguments": {"name": "Marmara Lojistik Hizmetleri"}}
+{"text": "Kartal Otomasyon için borç ve alacak hareketlerini göster?", "tool": "get_customer_transactions", "arguments": {"customer_name": "Kartal Otomasyon"}}
+{"text": "FTR-2026-7777 numaralı faturayı görüntüle?", "tool": "get_invoice", "arguments": {"invoice_no": "FTR-2026-7777"}}
+{"text": "en iyi satan ürün hangisi bakar mısın?", "tool": "get_top_products", "arguments": {"order": "desc"}}
+{"text": "İstanbul bölgesinde en iyi kazandıran müşteri hangisi?", "tool": "get_top_customers", "arguments": {"order": "desc", "city": "İstanbul"}}
+{"text": "Mega Sistemler'ın cari hesabı nasıl bakar mısın?", "tool": "get_customer_balance", "arguments": {"customer_name": "Mega Sistemler"}}
+{"text": "XYZ Teknoloji firmasının bilgilerini getir", "tool": "find_customer", "arguments": {"name": "XYZ Teknoloji"}}
+{"text": "FTR-2026-0099 faturasının detayını göster?", "tool": "get_invoice", "arguments": {"invoice_no": "FTR-2026-0099"}}
+{"text": "Lütfen Mega Sistemler'ın son ödemelerini göster?", "tool": "get_customer_transactions", "arguments": {"customer_name": "Mega Sistemler"}}
+{"text": "Akdeniz Gıda Sanayi bize borçlu mu?", "tool": "get_customer_balance", "arguments": {"customer_name": "Akdeniz Gıda Sanayi"}}
+{"text": "ABC Elektronik diye bir müşterimiz var mı?", "tool": "find_customer", "arguments": {"name": "ABC Elektronik"}}
+{"text": "Lütfen Marmara Lojistik Hizmetleri'ın güncel bakiyesini göster?", "tool": "get_customer_balance", "arguments": {"customer_name": "Marmara Lojistik Hizmetleri"}}
+{"text": "Deniz Yazılım firmasına 2 adet Laptop Pro 15 için fatura düzenle bakar mısın?", "tool": "create_invoice", "arguments": {"customer_name": "Deniz Yazılım", "product_name": "Laptop Pro 15", "quantity": 2}}
+{"text": "Lütfen Vega Bilişim kimdir?", "tool": "find_customer", "arguments": {"name": "Vega Bilişim"}}
+{"text": "Karadeniz Maden İşletmeleri için borç ve alacak hareketlerini göster?", "tool": "get_customer_transactions", "arguments": {"customer_name": "Karadeniz Maden İşletmeleri"}}
+{"text": "Lütfen Net Bilgisayar'ın hesap ekstresini getir?", "tool": "get_customer_transactions", "arguments": {"customer_name": "Net Bilgisayar"}}
+{"text": "2026-09-01 ile 2026-09-15 arası satış özetini ver", "tool": "get_sales_summary", "arguments": {"start_date": "2026-09-01", "end_date": "2026-09-15"}}
+{"text": "Lütfen en düşük satılan ürünümüz ne?", "tool": "get_top_products", "arguments": {"order": "asc"}}
+{"text": "FTR-2026-0142 numaralı faturayı görüntüle?", "tool": "get_invoice", "arguments": {"invoice_no": "FTR-2026-0142"}}
+{"text": "Aksesuar kategorisinde en az satan ürün hangisi?", "tool": "get_top_products", "arguments": {"order": "asc", "category": "Aksesuar"}}
+{"text": "Deniz Yazılım için Monitor 27 Inc ürününden 10 adet fatura kes bakar mısın?", "tool": "create_invoice", "arguments": {"customer_name": "Deniz Yazılım", "product_name": "Monitor 27 Inc", "quantity": 10}}
+{"text": "Vega Bilişim kaç kere sipariş vermiş bakar mısın?", "tool": "get_customer_sales", "arguments": {"customer_name": "Vega Bilişim"}}
+{"text": "Kartal Otomasyon adına 10 adet Laptop Pro 15 faturası oluştur", "tool": "create_invoice", "arguments": {"customer_name": "Kartal Otomasyon", "product_name": "Laptop Pro 15", "quantity": 10}}
+{"text": "Ay ay satış performansımız nasıl?", "tool": "get_monthly_sales", "arguments": {}}
+{"text": "Pusula Teknoloji adına 2 adet Harici Disk 1TB faturası oluştur bakar mısın?", "tool": "create_invoice", "arguments": {"customer_name": "Pusula Teknoloji", "product_name": "Harici Disk 1TB", "quantity": 2}}
+{"text": "en iyi satılan ürünümüz ne bakar mısın?", "tool": "get_top_products", "arguments": {"order": "desc"}}
+{"text": "Bursa bölgesinde en fazla kazandıran müşteri hangisi?", "tool": "get_top_customers", "arguments": {"order": "desc", "city": "Bursa"}}
+{"text": "Lütfen Monitör kategorisinde en çok satan ürün hangisi?", "tool": "get_top_products", "arguments": {"order": "desc", "category": "Monitör"}}
+{"text": "FTR-2026-0231 numaralı faturayı getir", "tool": "get_invoice", "arguments": {"invoice_no": "FTR-2026-0231"}}
+{"text": "Trakya Tarım Ürünleri hakkında bilgi ver?", "tool": "find_customer", "arguments": {"name": "Trakya Tarım Ürünleri"}}
+{"text": "İlk 3 müşteriyi satışa göre sırala?", "tool": "get_top_customers", "arguments": {"order": "desc", "limit": 3}}
+{"text": "İlk 5 ürünü satışa göre listele?", "tool": "get_top_products", "arguments": {"order": "desc", "limit": 5}}
+{"text": "XYZ Teknoloji için Laptop Pro 15 ürününden 5 adet fatura kes", "tool": "create_invoice", "arguments": {"customer_name": "XYZ Teknoloji", "product_name": "Laptop Pro 15", "quantity": 5}}
+{"text": "ABC Elektronik firmasına 5 adet A4 Fotokopi Kağıdı için fatura düzenle bakar mısın?", "tool": "create_invoice", "arguments": {"customer_name": "ABC Elektronik", "product_name": "A4 Fotokopi Kağıdı", "quantity": 5}}
+{"text": "Bursa'daki en az satış yapan müşteri kim", "tool": "get_top_customers", "arguments": {"order": "asc", "city": "Bursa"}}
+{"text": "Lütfen Duran Bilişim için A4 Fotokopi Kağıdı ürününden 10 adet fatura kes?", "tool": "create_invoice", "arguments": {"customer_name": "Duran Bilişim", "product_name": "A4 Fotokopi Kağıdı", "quantity": 10}}
+{"text": "ABC Elektronik müşterisini bul", "tool": "find_customer", "arguments": {"name": "ABC Elektronik"}}
+{"text": "Lütfen Ay bazında ciromuzu göster?", "tool": "get_monthly_sales", "arguments": {}}
+{"text": "FTR-2026-7777 numaralı faturayı iptal et?", "tool": "cancel_invoice", "arguments": {"invoice_no": "FTR-2026-7777"}}
+{"text": "XYZ Teknoloji bize borçlu mu?", "tool": "get_customer_balance", "arguments": {"customer_name": "XYZ Teknoloji"}}
+{"text": "en fazla satılan ürünümüz ne bakar mısın?", "tool": "get_top_products", "arguments": {"order": "desc"}}
+{"text": "en fazla satan ürün hangisi bakar mısın?", "tool": "get_top_products", "arguments": {"order": "desc"}}
+{"text": "en fazla satılan ürünümüz ne?", "tool": "get_top_products", "arguments": {"order": "desc"}}
+{"text": "Net Bilgisayar'ın bakiyesi ne kadar", "tool": "get_customer_balance", "arguments": {"customer_name": "Net Bilgisayar"}}
+{"text": "Tüm ürünlerin stok raporu", "tool": "get_stock_status", "arguments": {}}
+{"text": "Marmara Lojistik Hizmetleri firmasının kredi limiti ne kadar bakar mısın?", "tool": "get_customer_balance", "arguments": {"customer_name": "Marmara Lojistik Hizmetleri"}}
+{"text": "Lütfen FTR-2026-0231 numaralı faturanın KDV oranını yüzde 8 yap?", "tool": "update_invoice", "arguments": {"invoice_no": "FTR-2026-0231", "kdv_orani": 8}}
+{"text": "Kartal Otomasyon'ın son ödemelerini göster", "tool": "get_customer_transactions", "arguments": {"customer_name": "Kartal Otomasyon"}}
+{"text": "2026-09-01 ile 2026-09-15 arası satış özetini ver bakar mısın?", "tool": "get_sales_summary", "arguments": {"start_date": "2026-09-01", "end_date": "2026-09-15"}}
+{"text": "Akdeniz Gıda Sanayi için A4 Fotokopi Kağıdı ürününden 1 adet fatura kes", "tool": "create_invoice", "arguments": {"customer_name": "Akdeniz Gıda Sanayi", "product_name": "A4 Fotokopi Kağıdı", "quantity": 1}}
+{"text": "Lütfen en az satılan ürünümüz ne?", "tool": "get_top_products", "arguments": {"order": "asc"}}
+{"text": "Lütfen Yıldız Ticaret için Ofis Sandalyesi ürününden 10 adet fatura kes?", "tool": "create_invoice", "arguments": {"customer_name": "Yıldız Ticaret", "product_name": "Ofis Sandalyesi", "quantity": 10}}
+{"text": "XYZ Teknoloji müşterisini bul bakar mısın?", "tool": "find_customer", "arguments": {"name": "XYZ Teknoloji"}}
+{"text": "Lütfen Monitör kategorisinde en iyi satan ürün hangisi?", "tool": "get_top_products", "arguments": {"order": "desc", "category": "Monitör"}}
+{"text": "Karadeniz Maden İşletmeleri'ın cari hareketlerini listele", "tool": "get_customer_transactions", "arguments": {"customer_name": "Karadeniz Maden İşletmeleri"}}
+{"text": "Lütfen Pusula Teknoloji adına 1 adet USB Bellek 64GB faturası oluştur?", "tool": "create_invoice", "arguments": {"customer_name": "Pusula Teknoloji", "product_name": "USB Bellek 64GB", "quantity": 1}}
+{"text": "Aksesuar kategorisinde en düşük satan ürün hangisi?", "tool": "get_top_products", "arguments": {"order": "asc", "category": "Aksesuar"}}
+{"text": "Lütfen İzmir bölgesinde en az kazandıran müşteri hangisi?", "tool": "get_top_customers", "arguments": {"order": "asc", "city": "İzmir"}}
+{"text": "Net Bilgisayar ile ticaret geçmişimiz nasıl", "tool": "get_customer_sales", "arguments": {"customer_name": "Net Bilgisayar"}}
+{"text": "Genel stok durumunu özetle bakar mısın?", "tool": "get_stock_status", "arguments": {}}
+{"text": "FTR-2026-0142 faturasının detayını göster", "tool": "get_invoice", "arguments": {"invoice_no": "FTR-2026-0142"}}
+{"text": "Lütfen İstanbul'da hava durumu nasıl?", "tool": null, "arguments": {}}
+{"text": "XYZ Teknoloji'ın son ödemelerini göster", "tool": "get_customer_transactions", "arguments": {"customer_name": "XYZ Teknoloji"}}
+{"text": "en düşük satılan ürünümüz ne", "tool": "get_top_products", "arguments": {"order": "asc"}}
+{"text": "FTR-2026-0142 numaralı faturayı görüntüle bakar mısın?", "tool": "get_invoice", "arguments": {"invoice_no": "FTR-2026-0142"}}
+{"text": "Lütfen XYZ Teknoloji adına 2 adet USB Bellek 64GB faturası oluştur?", "tool": "create_invoice", "arguments": {"customer_name": "XYZ Teknoloji", "product_name": "USB Bellek 64GB", "quantity": 2}}
+{"text": "Kayseri'daki en iyi satış yapan müşteri kim bakar mısın?", "tool": "get_top_customers", "arguments": {"order": "desc", "city": "Kayseri"}}
+{"text": "Kartal Otomasyon ne kadar borçlu bakar mısın?", "tool": "get_customer_balance", "arguments": {"customer_name": "Kartal Otomasyon"}}
+{"text": "Trakya Tarım Ürünleri'ın cari hareketlerini listele?", "tool": "get_customer_transactions", "arguments": {"customer_name": "Trakya Tarım Ürünleri"}}
+{"text": "Net Bilgisayar hangi şehirde", "tool": "find_customer", "arguments": {"name": "Net Bilgisayar"}}
+{"text": "FTR-2026-0142 faturasını iptal etmek istiyorum bakar mısın?", "tool": "cancel_invoice", "arguments": {"invoice_no": "FTR-2026-0142"}}
+{"text": "Mega Sistemler bize borçlu mu", "tool": "get_customer_balance", "arguments": {"customer_name": "Mega Sistemler"}}
+{"text": "Lütfen FTR-2026-0099 numaralı fatura yanlış kesildi, iptal et?", "tool": "cancel_invoice", "arguments": {"invoice_no": "FTR-2026-0099"}}
+{"text": "Python nedir?", "tool": null, "arguments": {}}
+{"text": "Bu ay geçen aya göre ne kadar değişti?", "tool": "get_sales_growth", "arguments": {}}
+{"text": "Pusula Teknoloji kimdir?", "tool": "find_customer", "arguments": {"name": "Pusula Teknoloji"}}
+{"text": "Lütfen WARNING risk seviyesindeki ürünleri göster?", "tool": "get_stock_status", "arguments": {"risk": "WARNING"}}
+{"text": "Lütfen Ay ay satış performansımız nasıl?", "tool": "get_monthly_sales", "arguments": {}}
+{"text": "Trakya Tarım Ürünleri ile geçmişte ne kadar iş yapmışız", "tool": "get_customer_sales", "arguments": {"customer_name": "Trakya Tarım Ürünleri"}}
+{"text": "XYZ Teknoloji hangi şehirde", "tool": "find_customer", "arguments": {"name": "XYZ Teknoloji"}}
+{"text": "Akdeniz Gıda Sanayi diye bir müşterimiz var mı", "tool": "find_customer", "arguments": {"name": "Akdeniz Gıda Sanayi"}}
+{"text": "Deniz Yazılım için A4 Fotokopi Kağıdı ürününden 3 adet fatura kes", "tool": "create_invoice", "arguments": {"customer_name": "Deniz Yazılım", "product_name": "A4 Fotokopi Kağıdı", "quantity": 3}}
+{"text": "Monitör kategorisinde en düşük satan ürün hangisi bakar mısın?", "tool": "get_top_products", "arguments": {"order": "asc", "category": "Monitör"}}
+{"text": "Hangi ürünler CRITICAL durumda?", "tool": "get_stock_status", "arguments": {"risk": "CRITICAL"}}
+{"text": "en fazla satan ürün hangisi", "tool": "get_top_products", "arguments": {"order": "desc"}}
+{"text": "Genel ciromuz ne kadar?", "tool": "get_sales_summary", "arguments": {}}
+{"text": "Karadeniz Maden İşletmeleri kimdir?", "tool": "find_customer", "arguments": {"name": "Karadeniz Maden İşletmeleri"}}
+{"text": "Lütfen Mobilya kategorisinde en iyi satan ürün hangisi?", "tool": "get_top_products", "arguments": {"order": "desc", "category": "Mobilya"}}
+{"text": "Pusula Teknoloji firmasının kredi limiti ne kadar bakar mısın?", "tool": "get_customer_balance", "arguments": {"customer_name": "Pusula Teknoloji"}}
+{"text": "FTR-2026-0198 numaralı faturayı görüntüle bakar mısın?", "tool": "get_invoice", "arguments": {"invoice_no": "FTR-2026-0198"}}
+{"text": "Güven Ofis Malzemeleri'ın hesap ekstresini getir?", "tool": "get_customer_transactions", "arguments": {"customer_name": "Güven Ofis Malzemeleri"}}
+{"text": "Envanterde azalan ürünler hangileri?", "tool": "get_low_stock", "arguments": {}}
+{"text": "en az kazandıran müşterimiz kim", "tool": "get_top_customers", "arguments": {"order": "asc"}}
+{"text": "Stok uyarısı olan ürünleri listele bakar mısın?", "tool": "get_low_stock", "arguments": {}}
+{"text": "Hangi müşterilerin vadesi geçti bakar mısın?", "tool": "get_overdue_customers", "arguments": {}}
+{"text": "Aylık büyüme oranımız kaç?", "tool": "get_sales_growth", "arguments": {}}
+{"text": "Vega Bilişim'ın son ödemelerini göster bakar mısın?", "tool": "get_customer_transactions", "arguments": {"customer_name": "Vega Bilişim"}}
+{"text": "FTR-2026-0305 numaralı faturanın KDV oranını yüzde 1 yap", "tool": "update_invoice", "arguments": {"invoice_no": "FTR-2026-0305", "kdv_orani": 1}}
+{"text": "Lütfen FTR-2026-0142 faturasının detayını göster?", "tool": "get_invoice", "arguments": {"invoice_no": "FTR-2026-0142"}}
+{"text": "Güven Ofis Malzemeleri'ın cari hesabı nasıl", "tool": "get_customer_balance", "arguments": {"customer_name": "Güven Ofis Malzemeleri"}}
+{"text": "Pusula Teknoloji'ın son ödemelerini göster?", "tool": "get_customer_transactions", "arguments": {"customer_name": "Pusula Teknoloji"}}
+{"text": "Lütfen Antalya bölgesinde en fazla kazandıran müşteri hangisi?", "tool": "get_top_customers", "arguments": {"order": "desc", "city": "Antalya"}}
+{"text": "Pusula Teknoloji hakkında bilgi ver", "tool": "find_customer", "arguments": {"name": "Pusula Teknoloji"}}
+{"text": "Lütfen Acil stok girişi yapmamız gereken ürünler neler?", "tool": "get_low_stock", "arguments": {}}
+{"text": "Yıldız Ticaret ile olan satış geçmişimiz nasıl", "tool": "get_customer_sales", "arguments": {"customer_name": "Yıldız Ticaret"}}
+{"text": "FTR-2026-7777 numaralı faturayı görüntüle", "tool": "get_invoice", "arguments": {"invoice_no": "FTR-2026-7777"}}
+{"text": "Dünyanın en yüksek dağı hangisi", "tool": null, "arguments": {}}
+{"text": "Ay bazında ciromuzu göster?", "tool": "get_monthly_sales", "arguments": {}}
+{"text": "ABC Elektronik için borç ve alacak hareketlerini göster", "tool": "get_customer_transactions", "arguments": {"customer_name": "ABC Elektronik"}}
+{"text": "FTR-2026-0198 numaralı faturayı getir bakar mısın?", "tool": "get_invoice", "arguments": {"invoice_no": "FTR-2026-0198"}}
+{"text": "Yıldız Ticaret için Monitor 27 Inc ürününden 1 adet fatura kes", "tool": "create_invoice", "arguments": {"customer_name": "Yıldız Ticaret", "product_name": "Monitor 27 Inc", "quantity": 1}}
+{"text": "Lütfen FTR-2026-0198 faturasının detayını göster?", "tool": "get_invoice", "arguments": {"invoice_no": "FTR-2026-0198"}}
+{"text": "FTR-2026-0099 numaralı faturayı iptal et", "tool": "cancel_invoice", "arguments": {"invoice_no": "FTR-2026-0099"}}
+{"text": "Karadeniz Maden İşletmeleri'ın siparişlerini listele", "tool": "get_customer_sales", "arguments": {"customer_name": "Karadeniz Maden İşletmeleri"}}
+{"text": "FTR-2026-0231 numaralı faturayı iptal et?", "tool": "cancel_invoice", "arguments": {"invoice_no": "FTR-2026-0231"}}
+{"text": "Geçmişte Trakya Tarım Ürünleri'a ne kadar satış yapmışız", "tool": "get_customer_sales", "arguments": {"customer_name": "Trakya Tarım Ürünleri"}}
+{"text": "Satışlarımız arttı mı azaldı mı", "tool": "get_sales_growth", "arguments": {}}
+{"text": "Deniz Yazılım firmasına 1 adet Yazıcı Kartuşu için fatura düzenle bakar mısın?", "tool": "create_invoice", "arguments": {"customer_name": "Deniz Yazılım", "product_name": "Yazıcı Kartuşu", "quantity": 1}}
+{"text": "İstanbul'daki en çok satış yapan müşteri kim?", "tool": "get_top_customers", "arguments": {"order": "desc", "city": "İstanbul"}}
+{"text": "ABC Elektronik kimdir", "tool": "find_customer", "arguments": {"name": "ABC Elektronik"}}
+{"text": "FTR-2026-0099 numaralı faturayı iptal et?", "tool": "cancel_invoice", "arguments": {"invoice_no": "FTR-2026-0099"}}
+{"text": "Vega Bilişim ile ticaret geçmişimiz nasıl bakar mısın?", "tool": "get_customer_sales", "arguments": {"customer_name": "Vega Bilişim"}}
+{"text": "FTR-2026-1122 numaralı fatura yanlış kesildi, iptal et?", "tool": "cancel_invoice", "arguments": {"invoice_no": "FTR-2026-1122"}}
+{"text": "FTR-2026-0099 numaralı faturayı görüntüle", "tool": "get_invoice", "arguments": {"invoice_no": "FTR-2026-0099"}}
+{"text": "İstanbul bölgesinde en az kazandıran müşteri hangisi bakar mısın?", "tool": "get_top_customers", "arguments": {"order": "asc", "city": "İstanbul"}}
+{"text": "Vega Bilişim hangi şehirde bakar mısın?", "tool": "find_customer", "arguments": {"name": "Vega Bilişim"}}
+{"text": "Yıldız Ticaret'ın siparişlerini listele", "tool": "get_customer_sales", "arguments": {"customer_name": "Yıldız Ticaret"}}
+{"text": "Lütfen FTR-2026-1122 numaralı faturanın KDV oranını yüzde 1 yap?", "tool": "update_invoice", "arguments": {"invoice_no": "FTR-2026-1122", "kdv_orani": 1}}
+{"text": "Hangi ay en çok satış yapmışız", "tool": "get_monthly_sales", "arguments": {}}
+{"text": "Net Bilgisayar firmasına 1 adet Business Laptop 14 için fatura düzenle", "tool": "create_invoice", "arguments": {"customer_name": "Net Bilgisayar", "product_name": "Business Laptop 14", "quantity": 1}}
+{"text": "Lütfen Kartal Otomasyon firmasının kredi limiti ne kadar?", "tool": "get_customer_balance", "arguments": {"customer_name": "Kartal Otomasyon"}}
+{"text": "Yıldız Ticaret adına 5 adet A4 Fotokopi Kağıdı faturası oluştur?", "tool": "create_invoice", "arguments": {"customer_name": "Yıldız Ticaret", "product_name": "A4 Fotokopi Kağıdı", "quantity": 5}}
+{"text": "Akdeniz Gıda Sanayi kaç kere sipariş vermiş", "tool": "get_customer_sales", "arguments": {"customer_name": "Akdeniz Gıda Sanayi"}}
+{"text": "Kartal Otomasyon'ın hesap ekstresini getir?", "tool": "get_customer_transactions", "arguments": {"customer_name": "Kartal Otomasyon"}}
+{"text": "Lütfen Güven Ofis Malzemeleri ile ne kadar iş yapmışız?", "tool": "get_customer_sales", "arguments": {"customer_name": "Güven Ofis Malzemeleri"}}
+{"text": "Yıldız Ticaret için Ofis Sandalyesi ürününden 10 adet fatura kes", "tool": "create_invoice", "arguments": {"customer_name": "Yıldız Ticaret", "product_name": "Ofis Sandalyesi", "quantity": 10}}
+{"text": "Satış toplamımızı özetle", "tool": "get_sales_summary", "arguments": {}}
+{"text": "ABC Elektronik kaç kere sipariş vermiş", "tool": "get_customer_sales", "arguments": {"customer_name": "ABC Elektronik"}}
+{"text": "Lütfen Deniz Yazılım ile yaptığımız satışları göster?", "tool": "get_customer_sales", "arguments": {"customer_name": "Deniz Yazılım"}}
+{"text": "FTR-2026-1122 faturasının detayını göster", "tool": "get_invoice", "arguments": {"invoice_no": "FTR-2026-1122"}}
+{"text": "Trakya Tarım Ürünleri için USB Bellek 64GB ürününden 2 adet fatura kes?", "tool": "create_invoice", "arguments": {"customer_name": "Trakya Tarım Ürünleri", "product_name": "USB Bellek 64GB", "quantity": 2}}
+{"text": "Marmara Lojistik Hizmetleri ne kadar borçlu?", "tool": "get_customer_balance", "arguments": {"customer_name": "Marmara Lojistik Hizmetleri"}}
+{"text": "Kartal Otomasyon adına 5 adet Business Laptop 14 faturası oluştur?", "tool": "create_invoice", "arguments": {"customer_name": "Kartal Otomasyon", "product_name": "Business Laptop 14", "quantity": 5}}
+{"text": "İlk 10 ürünü satışa göre listele?", "tool": "get_top_products", "arguments": {"order": "desc", "limit": 10}}
+{"text": "Lütfen Aksesuar kategorisinde en düşük satan ürün hangisi?", "tool": "get_top_products", "arguments": {"order": "asc", "category": "Aksesuar"}}
+{"text": "Lütfen Marmara Lojistik Hizmetleri ile yaptığımız satışları göster?", "tool": "get_customer_sales", "arguments": {"customer_name": "Marmara Lojistik Hizmetleri"}}
+{"text": "ABC Elektronik firmasına 10 adet Laptop Pro 15 için fatura düzenle bakar mısın?", "tool": "create_invoice", "arguments": {"customer_name": "ABC Elektronik", "product_name": "Laptop Pro 15", "quantity": 10}}
+{"text": "Mobilya kategorisinde en fazla satan ürün hangisi", "tool": "get_top_products", "arguments": {"order": "desc", "category": "Mobilya"}}
+{"text": "Lütfen Hangi ürünler CRITICAL durumda?", "tool": "get_stock_status", "arguments": {"risk": "CRITICAL"}}
